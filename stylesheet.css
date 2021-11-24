@@ -1,0 +1,727 @@
+/* -----------------------------------Police de la page----------------------------------- */
+@font-face {
+    font-family: 'Roboto-thin';
+    src: url('Roboto-thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url('Roboto-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-regular';
+    src: url('Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* -----------------------------------Corps de la page et généralités----------------------------------- */
+
+body{
+	font-family:"Roboto-regular","Roboto-thin", "Roboto-bold";
+}
+* {
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+nav {
+	position: fixed;
+	top: 0;
+	left:0;
+	right: 0;
+	z-index: 100;
+	background-color: #FFF;
+	box-shadow: 0 0.5px 3px grey;
+}
+h2 {
+ 	text-align: center;
+ 	padding-top: 4%;
+ 	font-size: 35px;
+ 	font-family: "Roboto-bold";
+ }
+h4 {
+	font-weight: bold;
+	text-align: left;
+}
+figcaption {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    margin: -15% 5% 0 5%;
+}
+textarea {
+	width: 100%;
+	margin-top: 5%;
+	border-radius: 5px;
+	font-family:"Roboto-regular";
+	border: 1px solid #cccccc;
+}
+input {
+	width: 100%;
+	height: 20%;
+	margin-top: 5%;
+	border-radius: 5px;
+	border: 1px solid #cccccc;
+}
+form {
+	height: 100%;
+	width: 100%;
+}
+h1 span {
+	color: #5cadd3;
+}
+p span {
+	font-size: 16px;
+	font-family: "Roboto-bold";
+}
+
+/* -----------------------------------Barre de navigation----------------------------------- */
+
+
+#blocOnglet > li {
+	list-style-type: none;
+	padding-top: 9%;
+	padding-bottom: 8%;
+	margin-right: 25px;
+	border-top: 3px solid #FFF;
+}
+#blocOnglet li .fas {
+	display: none;
+}
+#bordureOnglet ul:not(:hover) li.active {
+	border-top: 3px solid #5cadd3;
+}
+#blocOnglet > li:hover {
+	border-top: 3px solid #5cadd3;
+}
+#blocOnglet {
+	float: right;
+	margin-right: 10%;
+	display: flex;
+	justify-content: space-around;
+}
+.logo {
+	float: left;
+	margin: 1% 0 1% 10%;
+}
+.onglet {
+	text-decoration: none;
+	color: black;
+}
+
+/* -----------------------------------Header - Slide----------------------------------- */
+
+@keyframes slide{
+0%{left:0px;}
+15%{left:0px;}
+30%{left:0px;}
+40%{left:0px;}
+50%{left:-100%;}
+60%{left:-100%;}
+75%{left:-100%;}
+90%{left:-100%;}
+100%{left:0px;}
+}
+#flecheGauche a {
+    color: #FFF;
+	font-size: 1.1em;
+	line-height: 50px;
+	padding: 3px;
+	font-family: "Roboto-thin"; 
+}
+#flecheDroite a {
+	color: #FFF;
+	font-size: 1.1em;
+	line-height: 50px;
+	padding: 10px;
+	font-family: "Roboto-thin";
+}
+#flecheDroite {
+	float: right;
+    margin-top: 10%;
+    margin-right: 0.2%;
+    height: 50px;
+    width: 26px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background-color: #000;
+    opacity: 0.3;
+}
+#flecheGauche {
+	float: left;
+    z-index: 3;
+    margin-top: 10%;
+    height: 50px;
+    width: 23px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-color: #000;
+    opacity: 0.3;
+}
+.slider figure {
+	position: relative;
+	width: 500%;
+	margin-top: 1%;
+	animation: 20s slide infinite;
+}
+.slider figure img {
+	float: left;
+	width: 20%;
+	z-index: 1;
+}
+.texteSlide1 h1 {
+	font-size: 30px;
+	font-family: "Roboto-bold";
+	margin-top: 0;
+	margin-bottom: 0;
+	clear: both;
+}
+.texteSlide1 p {
+	text-shadow: 0 1px 1px black;
+}
+.slider {
+	overflow: hidden;
+	margin-top: 67px;
+}
+.blocSlide1 {
+	display: flex;
+    justify-content: space-between;
+    margin-top: 6.5%;
+    position: absolute;
+    z-index: 2;
+    left:0;
+    right: 0;
+}
+.texteSlide1 {
+	margin-top: 3%;
+	margin-left: -40%;
+	color: white;
+	font-size: 14px;
+	clear: left;
+}
+.bouton {
+	display: block;
+	border-bottom: 2px solid #4494bb;
+	text-decoration: none;
+	background-color: #5cadd3;
+	color: #FFF;
+	font-family: "Roboto-regular";
+	width: 100px;
+	padding: 6px 5px 6px 5px;
+	text-align: center;
+	border-radius: 4px;
+	margin-top: 4%;
+}
+
+/* -----------------------------------Section - Services----------------------------------- */
+
+#imgElement img {
+	max-width: 100%;
+	height: auto;
+}
+#blocElement {
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 2%;
+}
+#imgElement {
+	width: 45%;
+	display: inline-block;
+	margin: 1% 0 0 5%;
+}
+.texteDescriptif h4 {
+		padding-left: 5%;	
+}
+.trait {
+	border-top: 1px solid grey;
+    margin-top: -13px;
+    width: 10%;
+    margin-left: 45%;
+}
+.descriptif {
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+	color: #808080;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.texteDescriptif {
+	width: 550%;
+}
+.element {
+	text-align: right;
+	width: 45%;
+	margin: 10% 5% 0 0;
+}
+.blocDescriptif .descriptif {
+	text-align: justify;
+	line-height: 25px;
+}
+.blocDescriptif {
+	display: flex;
+	height: 115px;
+}
+
+/* ----------------------------------- Icones ----------------------------------- */ 
+
+.fas {
+	color: #5cadd3;
+	margin: 1% 0 0 49%;
+	border: 5px solid #FFF;
+	border-radius: 100%;
+}
+.icone .fa-2x {
+	color: #5cadd3;
+	margin-top: 5%;
+	margin-right: 5%;
+	left:0;
+	border: 1px solid grey;
+	border-radius: 100%;
+	padding: 20%;
+	display: inline-block;
+	font-size: 25px;
+}
+.icone .fa-circle {
+	color: #5cadd3;
+	display: block;
+	margin-left: 53px;
+	font-size: 11px;
+	margin-top: -48%;
+	text-shadow: 5px 0 #FFF, 0 5px #FFF, 0 0, 0 -5px #FFF;
+}
+.icone {
+	width: 75%;
+}
+
+/* -----------------------------------Section - Projets----------------------------------- */ 
+
+#portfolio img {
+	width: 250px;
+	height: 170px;
+	padding: 5%;
+}
+#bouton2 ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: 300px;
+	height: 30px;
+	background-color: #e5e5e5;
+	border-radius: 4px;
+	margin: 0 auto;
+	border-bottom: 2px solid #e5e5e6;
+}
+#bouton2 li {
+	float: left;
+	width: 75px;
+	height: 30px;
+	font-size: 13px;
+	font-family: "Roboto-bold";
+	text-align: center;
+	line-height: 30px;
+	position: relative;
+}
+#bouton2 li a {
+	display: block;
+	text-decoration: none;
+	color: #64686d;
+}
+#bouton2 li:first-child :hover {
+	border-radius: 4px 0 0 4px;
+}
+#bouton2 li:last-child :hover {
+	border-radius: 0 4px 4px 0;
+}
+#bouton2 ul:not(:hover) li .active{
+	background-color: #5cadd3;
+	border-bottom: 2px solid #468cad;
+	border-radius: 4px 0 0 4px;
+	color: #FFF;
+}
+#bouton2 li :hover {
+	background-color: #5cadd3;
+	border-bottom: 2px solid #468cad;
+	color: #FFF;
+}
+#bouton2 li ::after {
+	content: '';
+	position: absolute;
+	display: none;
+	top: 31px;
+	left: 40%;
+ 	height : 0;
+	width : 0;
+	border-top : 8px solid #468cad;
+	border-right : 8px solid transparent;
+	border-left : 8px solid transparent;
+}
+#bouton2 ul:not(:hover) li .active::after,
+#bouton2 li :hover::after {
+	display: block;
+}
+#projets {
+	background-color: #f5f5f5;
+}
+#portfolio {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 0 5% 5% 5%;
+}
+#bouton2 {
+	margin-top: 5%;
+	margin-bottom: 4%;
+}
+.fond p {
+	color: #FFF;
+	visibility: hidden;
+	padding-left: 10px;
+	padding-top: 7px;
+	font-size: 13px;
+	margin-top: 5px;
+}
+.fond p i {
+	margin-left: 55px;
+    position: absolute;
+    margin-top: -20px;
+    border: 1.5px solid #FFF;
+    border-radius: 100%;
+    padding: 3%;
+    background-color: #5cadd3;
+    font-size: 13px;
+}
+.fond :hover p {
+	background-color: rgba(0, 0, 0, 0.3);
+	height: 55px;
+	visibility: visible;
+}
+.fond {
+	position: absolute;
+	width: 250px;
+	height: 60px;
+	margin: 117px 0 0 14px;
+}
+
+/* -----------------------------------Footer - Contact----------------------------------- */
+
+#blocMap iframe {
+	left:0;
+	top:0;
+	height: 440px;
+	width:100% ;
+	position: initial;
+	z-index: 3;
+	border:none;
+}
+#blocMap {
+	overflow: hidden;
+	margin:3% 1% 2% 1%;
+	box-shadow: 0 0 5px grey;
+	position: relative;
+}
+#formPart1 {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-bottom: 1%;
+}
+#formPart2 {
+	position: relative;
+}
+#basDePage {
+	font-size: 8px;
+	text-align: right;
+	padding: 5px 15px 5px 0;
+	color: grey;
+	background-color: #f5f5f5;
+}
+.formulaire  p {
+	font-size: 13px;
+}
+.formulaire h4 {
+	font-size: 14px;
+	margin: 1%;
+}
+.formulaire {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	z-index: 5;
+	top: 5%;
+	right: 5%;
+	bottom: 5%;
+	height: 85%;
+	width: 20%;
+	padding: 0.5% 2%;
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid #cccccc;
+	color: black;
+}
+
+
+/* -----------------------------------Responsive----------------------------------- */
+
+
+@media all and (min-width: 992px) and (max-width: 1022px){
+	#formPart1 {
+    	justify-content: center;
+    	margin-bottom: 0;
+    }
+    #formPart2 {
+        padding-top: 10%;
+    }
+    .icone {
+		width: 95%;
+	}
+	.formulaire {
+		width: 35%;
+	}
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+	ul {
+		margin-right: 5%;
+	}
+	h1 br {
+		display: none;
+	}
+	h2 {
+		font-size: 26px;
+	}
+	#blocOnglet > li {
+		margin-right: 5%;
+	}
+	#formPart1 {
+    	justify-content: center;
+    	margin-bottom: 0;
+    }
+    #formPart2 {
+        padding-top: 5%;
+    }
+    .texteSlide1 {
+    	width: 40%;
+    	margin-top: 0;
+    }
+    .formulaire {
+		width: 35%;
+	}
+	.icone {
+		width: 90%;
+	}
+	.fas {
+		font-size: 13px;
+	}
+}
+
+@media all and (max-width: 768px) {
+	ul {
+		margin-right: 2%;
+	}
+	h1 br {
+		display: none;
+	}
+	h2 {
+		font-size: 26px;
+	}
+	form {
+		width: 99%;
+	}
+	input {
+		margin-top: 1%
+	}
+	textarea {
+		margin-top: 1%;
+		grid-row: 3;
+	}
+	p > .bouton {
+		margin-top: 0;
+		margin-left: 31%;
+	}
+	#blocMap iframe {
+		position: initial;
+		height: 250px;
+		border-bottom: 2px solid #FFF;
+	}
+	#blocOnglet > li {
+		margin-right: 2%;
+	}
+	#blocElement {
+		flex-direction: column;
+	}
+	#imgElement {
+		width: auto;
+		height: 25%;
+		margin: 2% 1% 0 1%;
+		padding: 0 15% 0 15%;
+	}
+	#blocOnglet {
+		margin-right: 1%;
+		width: 45%;
+	}
+	#blocMap {
+		padding-bottom: 0;
+	}
+
+	#formPart1 {
+	    justify-content: flex-start;
+	    margin: 1%;
+	    align-items: center;
+	    color: #33373c;
+	}
+	#formPart2 {
+		margin-right: 1%;
+	}
+	.texteSlide1 h1 {
+		font-size: 20px;
+	}
+	.texteSlide1 p {
+		font-size: 13px;
+	}
+	.texteSlide1 {
+		width: 55%;
+		margin-left: -30%;
+	}
+	.logo {
+		width: 40%;
+		margin-left:1%;
+	}
+	.blocSlide1 {
+		margin-top: 25px;
+	}
+	.bouton {
+		font-size: 11px;
+	}
+	.trait {
+		width: 11%;
+	}
+	.fas {
+		font-size: 14px;
+    	border: 4px solid #FFF;
+	}
+	.element {
+		width: auto;
+	}
+	.formulaire {
+		position: initial;
+		width: 96%;
+		background-color: #f5f5f5;
+	}
+	.icone {
+		padding: 2%;
+		width: 60%;
+	}
+	.icone .fa-circle{
+		margin-top: -44%;
+	    margin-left: 61%;
+	    padding-left: 25%;
+	    font-size: 9px;
+	}
+	.icone .fa-2x {
+		padding: 15%
+	}
+	.fa-chart-pie {
+		font-size: 20px;
+	}
+}
+@media all and (max-width: 550px) {
+	#blocOnglet li .fas {
+		display: block;
+	}
+	#blocOnglet > li > a {
+		display: none;
+	}
+	#blocOnglet > li:hover {
+		border-top: none;
+	}
+	#blocOnglet {
+		width: 20%;
+	}
+	.introBloc > .descriptif {
+		margin-top: 4%;
+	}
+	.slider figure img{
+		max-height: 210px;
+		max-width: 550px;
+		margin-top: -5px;
+	}
+	.texteSlide1 h1 {
+		font-size: 15px;
+	}
+	.texteSlide1 p {
+		font-size: 10px;
+	}
+	.formulaire h3 {
+		font-size: 16px;
+	}
+	.formulaire h4{
+		font-size: 12px;
+	}
+	.formulaire p {
+		font-size: 11px;
+	}
+	.logo img {
+		height: 39px;
+		width: 180px;
+	}
+	.logo {
+		margin: 0 0 0 5%;
+		padding-top: 2%;
+	}
+	.icone {
+		display: none;
+	}
+	.trait {
+		visibility: hidden;
+	}
+	.element {
+		margin-left: 2.5%;
+	}
+	.descriptif {
+		font-size: 12px;
+	}
+	.blocDescriptif .descriptif {
+		line-height: 17px;
+	}
+	.texteDescriptif {
+		padding-right: 0;
+	}
+	.slider {
+		margin-top: 55px
+	}
+	.texteSlide1 {
+		margin-left: -35%;
+		width: 46%;
+	}
+	.blocSlide1 {
+		margin-top: 10px;
+	}
+	.bouton {
+	    width: 35%;
+	    padding: 3%;
+	}
+}
+@media all and (max-width: 388px) {
+	.slider figure img {
+		max-height: 188px;
+		min-height: 140px;
+		max-width: 388px;
+		margin-top: -10px;
+	}
+	.texteSlide1 p {
+		font-size: 9px;
+	}
+	.texteSlide1{
+		padding-top: 5px;
+	}
+	.texteSlide1 .bouton {
+		display: none;
+	}
+}
